@@ -59,25 +59,6 @@ class UI {
 
 }
 
-function onetime(node, type, callback) {
-
-	node.addEventListener(type, function(e) {
-	
-		e.target.removeEventListener(e.type, arguments.callee);
-
-		return callback(e);
-	});
-}
-
-onetime(gPop,'click',handler);
-
-    function handler(e){
-         
-      if(e.target.id='closing'){
-   
-         gPop.style.display ="none";
-   }
-}
 
 btn.addEventListener('click',
   function(e) {
